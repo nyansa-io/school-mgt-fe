@@ -83,7 +83,7 @@ const page = () => {
                     </form>
                     <div className="login text-sm text-right">
                       <span className="text-gray-400">Already registered? Click here to</span>{' '}
-                      <Link className="text-primary" href={'/login'}>
+                      <Link className="text-primary" href={'/'}>
                         Sign in
                       </Link>
                     </div>

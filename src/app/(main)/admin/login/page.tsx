@@ -31,7 +31,7 @@ const page = () => {
     }
 
     return (
-        <div className='flex flex-col justify-center items-center w-[500px] mx-auto h-full'>
+        <div className='flex flex-col justify-center items-center w-[500px] max-w-full px-4 mx-auto h-full'>
             <div className="headerSection text-left  w-full">
                 {/* main header */}
                 <p className="header ">

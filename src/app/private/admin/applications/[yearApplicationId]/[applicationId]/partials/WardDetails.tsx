@@ -38,7 +38,7 @@ const WardDetails = () => {
                 </div>
                 {/* loaction of previous school */}
                 <div className="fullName">
-                    <p className="label text-sm text-gray-500">Previous School's location</p>
+                    <p className="label text-sm text-gray-500">Previous School&apos;s location</p>
                     <p className="value font-semibold text-gray-600">Adenta, Accra</p>
                 </div>
 
@@ -56,7 +56,7 @@ const WardDetails = () => {
                 {/* Additional Notes */}
                 <div className="fullName col-span-2">
                     <p className="label text-sm text-gray-500">Additional Notes</p>
-                    <p className="value bg-gray-50 p-3 mt-1 text-gray-600">Maxwell is particularly interested in the school's science program and has won several local science fair competitions.</p>
+                    <p className="value bg-gray-50 p-3 mt-1 text-gray-600">Maxwell is particularly interested in the school&apos;s science program and has won several local science fair competitions.</p>
                 </div>
             </div>
         </div>

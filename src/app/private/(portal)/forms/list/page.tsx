@@ -29,7 +29,7 @@ const Page = () => {
       {
         header: "Candidate",
         id: "candidate",
-        cell: ({ row }: any) => (
+        cell: ({ row }: { row: { original: typeof enlistmentFormData[number] } }) => (
           <div className="flex items-center gap-2">
             {/* user image */}
             <div className="avatar size-10">
@@ -49,22 +49,22 @@ const Page = () => {
       {
         accessorKey: 'guardian',
         header: 'Guardian Name',
-        cell: info => `${info.row.original.firstName} ${info.row.original.lastName}`,
+        cell: _info => `${_info.row.original.firstName} ${_info.row.original.lastName}`,
       },
       {
         accessorKey: 'class',
         header: 'Class',
-        cell: info => info.row.original.class,
+        cell: _info => _info.row.original.class,
       },
       {
         accessorKey: 'progress',
         header: 'Progress',
-        cell: info => <div><progress value={info.row.original.progress} className='rounded-full overflow-hidden' /></div>,
+        cell: _info => <div><progress value={_info.row.original.progress} className='rounded-full overflow-hidden' /></div>,
       },
       {
         accessorKey: 'actions',
         header: '',
-        cell: info => <div><Link href={'#'} className='hover:underline decoration-primary text-primary'>View</Link></div>,
+        cell: _info => <div><Link href={'#'} className='hover:underline decoration-primary text-primary'>View</Link></div>,
       },
     ]
 

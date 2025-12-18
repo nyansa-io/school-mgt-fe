@@ -5,7 +5,6 @@ import CustomNavTabs from '@/customComponents/CustomNavTabs'
 import IconifyIcon from '@/customComponents/IconifyIcon'
 import { cn } from '@/lib/utils'
 import { useAppSettingsStore } from '@/store/appSettings'
-import { set } from 'date-fns';
 import EventDetailsView from './partials/EventDetailsView';
 import ApplicationCandidatesView from './partials/ApplicationCandidatesView';
 import EventsGradingView from './partials/EventsGradingView';
@@ -23,7 +22,7 @@ const Page = () => {
     return () => {
       updatenoMaxWidthStatus(false)
     };
-  }, [])
+  }, [updatenoMaxWidthStatus])
 
   // current view state
   const [currentView, setcurrentView] = useState<TEventViews>('Event Details')

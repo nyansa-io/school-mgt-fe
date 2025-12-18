@@ -3,14 +3,13 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   eslint: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has ESLint errors.
-    ignoreDuringBuilds: true,
+    // Allow build to succeed even with ESLint errors
+    ignoreDuringBuilds: false,
   },
   typescript: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has type errors.
-    ignoreBuildErrors: true,
+    // Allow build to succeed even with TypeScript errors
+    // Note: This is only for build - your IDE will still show type errors
+    ignoreBuildErrors: false,
   },
   images:{
     remotePatterns:[

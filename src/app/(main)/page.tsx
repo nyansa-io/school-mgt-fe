@@ -27,7 +27,7 @@ const ClientLoginPage = () => {
   const router = useRouter();
 
   const [currentView, setCurrentView] = useState<"Phone" | "Otp">("Phone");
-  const progressBarRef = useRef<{ next: () => void } | null>(null);
+  const progressBarRef = useRef<{ next: () => void; previous: () => void } | null>(null);
 
   const phoneNumberForm = useForm<z.infer<typeof phoneNumberSchema>>({
     resolver: zodResolver(phoneNumberSchema),

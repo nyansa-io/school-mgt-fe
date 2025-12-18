@@ -32,7 +32,7 @@ const ClientApplicationDetail = () => {
     return () => {
       updatenoMaxWidthStatus(false);
     };
-  }, []);
+  }, [updatenoMaxWidthStatus]);
 
   return (
     <div className="userApplicationDetails relative">
@@ -74,8 +74,8 @@ const ClientApplicationDetail = () => {
         <div className="tabList my-6 h-[36px] sticky top-26 z-10 bg-[#f8f8fb] border-x-none w-full">
           <CustomNavTabs
             initialTab={currentView}
-            clicked={(val: any) => {
-              setcurrentView(val);
+            clicked={(val: string) => {
+              setcurrentView(val as TApplicationDetails);
             }}
             tabs={[
               "Ward Details",

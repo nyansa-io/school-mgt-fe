@@ -4,16 +4,17 @@ import { Card, CardContent } from '@/components/ui/card';
 import CustomCarousel from '@/customComponents/CustomCarousel';
 import Autoplay from 'embla-carousel-autoplay'
 import React from 'react'
+import { EmblaPluginType } from 'embla-carousel'
 
-const registrationCards: (React.ComponentType<any> | React.ReactElement)[] = [
-    <div className="p-1">
+const registrationCards: React.ReactElement[] = [
+    <div key="card-1" className="p-1">
         <Card>
             <CardContent className="flex aspect-square items-center justify-center p-">
                 <span className="text-4xl font-semibold">{1}</span>
             </CardContent>
         </Card>
     </div>,
-    <div className="p-1">
+    <div key="card-2" className="p-1">
         <Card>
             <CardContent className="flex aspect-square items-center justify-center p-">
                 <span className="text-4xl font-semibold">{2}</span>
@@ -23,7 +24,7 @@ const registrationCards: (React.ComponentType<any> | React.ReactElement)[] = [
 ]
 
 const RegistrationCarousels = () => {
-    const plugins: any[] = React.useMemo(() => [
+    const plugins: EmblaPluginType[] = React.useMemo(() => [
     Autoplay({
       delay: 2000,
       stopOnInteraction: true,

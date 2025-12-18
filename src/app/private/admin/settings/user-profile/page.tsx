@@ -2,7 +2,7 @@
 
 import React from 'react'
 
-const page = () => {
+const Page = () => {
     return (
         <div className='ProfileSettingsPage'>
             User Profile Settings Page
@@ -10,4 +10,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

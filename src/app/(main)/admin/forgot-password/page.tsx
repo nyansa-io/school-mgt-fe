@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form'
 import * as z from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Form } from '@/components/ui/form'
-import { InputFormField, PasswordFormField } from '@/customComponents/FormFields'
+import { InputFormField } from '@/customComponents/FormFields'
 import ButtonLoading from '@/customComponents/Button'
 import { Button } from '@/components/ui/button'
 import { useRouter } from 'next/navigation'
@@ -14,7 +14,7 @@ const forgotPasswordSchema = z.object({
     email: z.string().min(1, 'Email or username is required'),
 })
 
-const page = () => {
+const Page = () => {
     const router = useRouter()
 
     const forgotPasswordForm = useForm<z.infer<typeof forgotPasswordSchema>>({
@@ -56,4 +56,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

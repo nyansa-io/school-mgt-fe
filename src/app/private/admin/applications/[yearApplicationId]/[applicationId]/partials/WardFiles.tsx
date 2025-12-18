@@ -1,7 +1,7 @@
 'use client';
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import AppDivider from '@/customComponents/AppDivider';
+
 import { FileArchiveIcon } from 'lucide-react';
 import React from 'react'
 

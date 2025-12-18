@@ -21,7 +21,7 @@ const enlistmentFormData = [
   }
 ]
 
-const page = () => {
+const Page = () => {
   const router = useRouter()
 
   const formColumns: ColumnDef<typeof enlistmentFormData[number]>[] =
@@ -97,4 +97,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

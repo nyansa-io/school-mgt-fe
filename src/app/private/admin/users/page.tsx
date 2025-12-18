@@ -45,7 +45,7 @@ const data = [
   },
 ]
 
-const page = () => {
+const Page = () => {
   return (
     <div className='p-4'>
       <DataTable columns={columns} data={data} totalPages={1} showAddButton={false} />
@@ -53,4 +53,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

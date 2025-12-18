@@ -15,7 +15,7 @@ const loginSchema = z.object({
     password: z.string().min(6, 'Password is required and must be atleast 6 characters')
 })
 
-const page = () => {
+const Page = () => {
     const router = useRouter()
 
     const loginForm = useForm<z.infer<typeof loginSchema>>({
@@ -71,4 +71,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

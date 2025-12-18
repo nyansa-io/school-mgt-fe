@@ -1,10 +1,9 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Geist, Geist_Mono } from "next/font/google";
 import "@/globals.css";
 import { ReactNode } from 'react';
-import { Metadata } from 'next';
 import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
 import SchoolLogo from '@/customComponents/SchoolLogo';
@@ -21,31 +20,8 @@ const geistMono = Geist_Mono({
 });
 
 
-type TView = 'login' | 'register' | 'forgotpassword' | 'verifyphone'
-
 const AuthLayout = ({ children }: { children: ReactNode }) => {
-  const [currentview, setcurrentview] = useState<TView>('login')
   const pathname = usePathname()
-
-  useEffect(() => {
-    // Get the current path
-    const path = pathname.split('/')[1]
-    // Set the current view based on the path
-    console.log('path', path)
-    if (path === 'login') {
-      setcurrentview('login')
-    } else if (path === 'register') {
-      setcurrentview('register')
-    } else if (path === 'forgotpassword') {
-      setcurrentview('forgotpassword')
-    } else if (path === 'verifyphone') {
-      setcurrentview('verifyphone')
-    }
-
-    return () => {
-
-    }
-  }, [pathname])
 
 
   return (

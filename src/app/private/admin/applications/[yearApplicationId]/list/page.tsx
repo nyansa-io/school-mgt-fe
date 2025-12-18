@@ -20,7 +20,7 @@ const enlistmentFormData = [
   },
 ];
 
-const page = () => {
+const Page = () => {
   const { yearApplicationId } = useParams();
 
   const formColumns: ColumnDef<(typeof enlistmentFormData)[number]>[] = [

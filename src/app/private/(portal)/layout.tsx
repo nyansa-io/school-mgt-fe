@@ -1,11 +1,9 @@
 
 import React from 'react'
-import { Geist, Geist_Mono } from "next/font/google";
 import "@/globals.css";
 import { ReactNode } from 'react';
-import { Metadata } from 'next';
 
-import { AppSidebar } from "@/components/app-sidebar"
+// import { AppSidebar } from "@/components/app-sidebar"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -20,11 +18,10 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar"
-import { } from '@radix-ui/react-dropdown-menu';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
-import { Bell, DivideCircleIcon } from 'lucide-react';
-import { useAppSettingsStore } from '@/store/appSettings';
-import { cn } from '@/lib/utils';
+import { Bell } from 'lucide-react';
+// import { useAppSettingsStore } from '@/store/appSettings';
+// import { cn } from '@/lib/utils';
 import PrivateLayoutLocal from '@/customComponents/PrivateLayout';
 import { ExternalUserSidebar } from '@/customComponents/ExternalUserSideBar';
 

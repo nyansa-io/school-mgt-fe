@@ -27,7 +27,7 @@ const ClientLoginPage = () => {
   const router = useRouter();
 
   const [currentView, setCurrentView] = useState<"Phone" | "Otp">("Phone");
-  const progressBarRef = useRef<any>(null);
+  const progressBarRef = useRef<{ next: () => void } | null>(null);
 
   const phoneNumberForm = useForm<z.infer<typeof phoneNumberSchema>>({
     resolver: zodResolver(phoneNumberSchema),
@@ -47,12 +47,12 @@ const ClientLoginPage = () => {
     console.log("resend OTP");
   };
 
-  const handleSubmit = (data: any) => {
+  const handleSubmit = () => {
     setCurrentView("Otp");
     progressBarRef?.current?.next?.();
   };
 
-  const goToDashboard = (data:any) => {
+  const goToDashboard = () => {
     router.push("/private/dashboard");
   };
 
@@ -96,7 +96,7 @@ const ClientLoginPage = () => {
             </form>
             <div className="login text-sm text-right mt-4 w-full">
               <span className="text-gray-400">
-                Don't have an account? Click here to{" "}
+                Don&apos;t have an account? Click here to{" "}
               </span>
               <Link className="text-primary" href="/register">
                 Register

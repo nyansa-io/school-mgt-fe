@@ -15,7 +15,7 @@ type TEventViews = 'Event Details' | 'Candidates' | 'Grading'
 
 const eventViews: TEventViews[] = ['Event Details', 'Candidates', 'Grading']
 
-const page = () => {
+const Page = () => {
   const { updatenoMaxWidthStatus } = useAppSettingsStore()
   // this is a useeffect that updates the no max width status to true when the page is mounted
   useEffect(() => {
@@ -91,4 +91,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

@@ -35,7 +35,7 @@ const settingsModuleLinkCards: ISettingsModuleLinkCard[] = [
 
 ]
 
-const page = () => {
+const Page = () => {
     return (
         <div className='settingsPage my-4'>
             {/* heading */}
@@ -72,4 +72,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

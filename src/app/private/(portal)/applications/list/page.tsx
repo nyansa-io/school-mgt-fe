@@ -3,7 +3,7 @@
 import React from 'react'
 import ApplicationCard from '../partials/ApplicationCard';
 
-const page = () => {
+const Page = () => {
   return (
     <div className='externalUserApplicationListPage mt-4 h-full px-4'>
       {/* form headers */}
@@ -25,4 +25,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

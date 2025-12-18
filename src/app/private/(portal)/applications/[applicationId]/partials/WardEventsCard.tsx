@@ -4,7 +4,7 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import ApplicationEventModal from '@/customComponents/ApplicationEventModal'
 import ButtonLoading from '@/customComponents/Button'
-import Link from 'next/link'
+
 import React, { useState } from 'react'
 
 const WardEventsCard = () => {

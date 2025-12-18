@@ -23,7 +23,7 @@ const otpSchema = z.object({
   otp: z.string().min(4, 'Must be atleast 4 digits')
 })
 
-const page = () => {
+const Page = () => {
   const [currentView, setcurrentView] = useState<'OTP' | 'FORM'>('FORM')
 
   const progressBarRef = useRef(null)
@@ -36,7 +36,7 @@ const page = () => {
     resolver: zodResolver(otpSchema)
   })
 
-  const submitRegisterAccount = (data: any) => {
+  const submitRegisterAccount = (data: z.infer<typeof registerSchema>) => {
     console.log('data', data)
     setcurrentView('OTP')
   }
@@ -126,4 +126,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
